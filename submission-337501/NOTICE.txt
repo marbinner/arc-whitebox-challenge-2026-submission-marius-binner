@@ -1,0 +1,131 @@
+Sources and licensing
+=====================
+
+Rank-48 and rank-49 circuits
+---------------------------
+Derived from PLinOpt, by Jean-Guillaume Dumas, Bruno Grenet, Clement Pernet,
+and Alexandre Sedoglavic: https://github.com/jgdumas/plinopt
+Pinned upstream commit: 1af82ca4df7ed7d9687bc5f9a39bc10e724e1e0f.
+These derived circuit portions retain the CeCILL-B Version 1.0 terms;
+see LICENSE_CeCILL-B.txt and PLINOPT_AUTHORS.txt. Original source SLPs and
+hashes are also retained in the prior implementation/rank48_source and
+implementation/winograd49_source directories of the complete bundle.
+
+Stable alternative-basis rank-7 circuits
+---------------------------------------
+Adapted from Appendix A.1 of "Alternative Basis matrix multiplication is
+fast and stable", by Oded Schwartz, Sivan Toledo, Noa Vaknin and Gal Wiernik.
+DOI: https://doi.org/10.1007/s00211-026-01531-9
+Article license: CC BY 4.0, https://creativecommons.org/licenses/by/4.0/
+The adaptation changes signs and absorbs coordinate permutations into
+argument/output view tuples. This preserves the exact bilinear identities
+and absolute-coefficient error-growth quantities. Author attribution and
+the article/license links must accompany redistribution of these portions.
+
+New implementation work
+-----------------------
+Python translation, generated direct-ufunc/out interfaces, batching engine,
+paired-axis traversal, benchmarks, and permutation adaptation were prepared
+by ChatGPT on 2026-10-07. The two source licenses above apply to their
+respective derived portions; this notice does not assign a single blanket
+license to the whole implementation. No warranty is provided.
+
+The counter and benchmarks use public Flopscope 0.12.0+np2.4.6 operations.
+No private numerical entry points or unmetered array arithmetic are used
+inside multiply(). Ordinary NumPy is used only by separate validation code.
+
+Rank-20 <2,3,4> circuits
+------------------------
+The rank-20 <2,3,4> scheme is due to Hopcroft and Kerr (1971); its tensor is as
+listed in Sedoglavic's catalogue, https://fmm.univ-lille.fr/2x3x4.html. The
+54-node straight-line programs derive from Andrew Perminov's
+FastMatrixMultiplication repository,
+https://github.com/dronperminov/FastMatrixMultiplication
+(schemes/results/addition_reduced_ZT/2x3x4_m20_cr54_fv22_cn90_ZT_reduced.json),
+MIT License, Copyright (c) 2025 Andrew Perminov; see LICENSE_MIT_Perminov.txt.
+The six orientations come from tensor transposition and duality; every circuit
+was checked exactly against its tensor before use.
+
+Rank-40 <3,3,6> and <3,6,3> circuits
+------------------------------------
+The rank-40 circuits for <3,3,6> and its <3,6,3> orientation (the r40 top
+levels of the fast-matmul kernel) are also derived from PLinOpt, by
+Jean-Guillaume Dumas, Bruno Grenet, Clement Pernet, and Alexandre Sedoglavic:
+https://github.com/jgdumas/plinopt. They retain the CeCILL-B Version 1.0 terms
+stated above; see LICENSE_CeCILL-B.txt and PLINOPT_AUTHORS.txt. The <3,3,6>
+rank-40 tensor is listed in Sedoglavic's catalogue,
+https://fmm.univ-lille.fr/3x3x6.html, with its original authors.
+
+Further schemes from FastMatrixMultiplication (Perminov)
+--------------------------------------------------------
+Besides the rank-20 <2,3,4> scheme above, the kernel uses these schemes from
+Andrew Perminov's FastMatrixMultiplication repository,
+https://github.com/dronperminov/FastMatrixMultiplication, MIT License,
+Copyright (c) 2025 Andrew Perminov; see LICENSE_MIT_Perminov.txt:
+  <4,4,10> rank 115   schemes/results/ZT/4x4x10_m115_ZT.json
+  <4,5,8>  rank 118   schemes/results/ZT/4x5x8_m118_ZT.json
+  <4,5,12> rank 174   schemes/results/ZT/4x5x12_m174_ZT.json
+  <5,5,12> rank 204   schemes/results/ZT/5x5x12_m204_ZT.json
+  <4,6,6>  rank 105   schemes/results/ZT/4x6x6_m105_ZT.json
+  <6,6,12> rank 294   schemes/results/ZT/6x6x12_m294_ZT.json
+  <6,8,12> rank 378   schemes/results/ZT/6x8x12_m378_ZT.json
+  <2,4,4>  rank 26    schemes/results/addition_reduced_ZT/2x4x4_m26_*_ZT_reduced.json
+  <4,4,5>  rank 61    schemes/results/addition_reduced_ZT/4x4x5_m61_cr233_fv93_cn452_ZT_reduced.json
+Several of these are also listed in Sedoglavic's catalogue,
+https://fmm.univ-lille.fr/ (e.g. 4x4x10.html and 4x5x8.html credit the same
+repository). The kernel uses them in transposed and permuted orientations
+(tensor transposition and duality) and composes them with the rank-7 levels
+above. Every circuit was checked exactly against its tensor before use.
+
+Rank-54 <3,4,6> scheme (AlphaEvolve)
+------------------------------------
+The rank-54 <3,4,6> scheme, used in its <3,4,6>, <3,6,4>, <4,3,6>, <4,6,3> and
+<6,4,3> orientations, is due to Alexander Novikov, Ngan Vu, Marvin Eisenberger, Emilien
+Dupont, Po-Sen Huang, Adam Zsolt Wagner, Sergey Shirobokov, Borislav Kozlovskii,
+Francisco J. R. Ruiz, Abbas Mehrabian, M. Pawan Kumar, Abigail See, Swarat
+Chaudhuri, George Holland, Alex Davies, Sebastian Nowozin, Pushmeet Kohli, and
+Matej Balog, "AlphaEvolve: A coding agent for scientific and algorithmic
+discovery", Google DeepMind technical report, May 2025,
+https://arxiv.org/abs/2506.13131.
+We took its decomposition from Sedoglavic's catalogue,
+https://fmm.univ-lille.fr/3x4x6.html. The authors' results repository,
+https://github.com/google-deepmind/alphaevolve_results, states: "All software
+is licensed under the Apache License, Version 2.0 (Apache 2.0)" and "All other
+materials are licensed under the Creative Commons Attribution 4.0
+International License (CC-BY)". This attribution accompanies the scheme on
+redistribution.
+
+Structured triangular and Gram circuits (flip-cpd)
+--------------------------------------------------
+The structured block-product circuits used by the triangular and Gram
+(A A^T) products of the covariance step (the _TR_FACTOR_UG and _TR_FACTOR_GT
+graphs, run by _tr_factor_product, _tr_factor_triangular and _tr_factor_gram)
+derive from Kirill Khoruzhii, Patrick Gelss, and Sebastian Pokutta, "Faster
+Algorithms for Structured Matrix Multiplication via Flip Graph Search",
+arXiv:2511.10786 (2025), https://arxiv.org/abs/2511.10786, and its released
+coefficient code, https://github.com/khoruzhii/flip-cpd (commit
+9eeb17f487f14103d7128cf290ae61535d8983b1), MIT License, Copyright (c) 2025
+Kirill Khoruzhii; see LICENSE-flip-cpd. Negations were folded into the
+consumers' add/sub signs; the bilinear identities are unchanged.
+
+Cumulant propagation (Alignment Research Center reference code)
+---------------------------------------------------------------
+The third-order cumulant ("K3") propagation at the core of this estimator
+started as a port of the Alignment Research Center's reference implementation
+of cumulant propagation, https://github.com/alignment-research-center/mlp_cumulant_propagation
+(src/mlp_kprop; commit 93d091a4c26c042bfffa28f2e76a81bc0aba94bb), which
+accompanies Wilson Wu, Victor Lecomte, Michael Winer, George Robinson, Jacob
+Hilton, and Paul Christiano, "Estimating the expected output of wide random
+MLPs more efficiently than sampling", arXiv:2605.05179 (2026),
+https://arxiv.org/abs/2605.05179. MIT License, Copyright (c) 2026 Alignment
+Research Center; see LICENSE_MIT_ARC.txt. Our port was rewritten for
+flopscope, restructured to fit the FLOP budget, and extended.
+
+Use of AI tools
+---------------
+Most of this estimator's code, and the tooling and tests behind it, were
+written by AI coding agents working under the team's direction and review:
+OpenAI Codex and ChatGPT (GPT models), Anthropic Claude Code (Claude models),
+and Google Gemini. The team chose the research directions, set the acceptance
+tests, and checked the results. The technical write-up gives the full account
+that the competition rules require.
