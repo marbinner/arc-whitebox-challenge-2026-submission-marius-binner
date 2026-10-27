@@ -47,6 +47,27 @@ Why `--no-residual-wall-time-limit`: the grader allows 0.4 s of unmetered Python
 usually exceeds 0.4 s and would mark every network as failed, although the predictions and FLOP counts are the same.
 On a slow machine you may also want `--wall-time-limit 600`.
 
+## Switch-off ablations
+
+`ablation/ablate.py` reproduces the switch-off table of the technical write-up (Table 4). It runs the exact submitted
+estimator of #337501 with one component switched off, without retraining, on networks of the public `full` split
+(labels from 1e9 samples). `ablation/summarize.py` then compares each variant with the unmodified estimator (`base`)
+network by network: geometric-mean ratio of the noise-corrected final-layer MSE with a 95% confidence interval, the
+number of networks that got worse, and the change in billed FLOPs.
+
+```bash
+mkdir -p results
+# the 64 networks of the write-up are 896-959; `base` is the unmodified estimator
+python ablation/ablate.py base   896 960 results/base.jsonl
+python ablation/ablate.py r8_off 896 960 results/r8_off.jsonl
+python ablation/summarize.py results/*.jsonl
+```
+
+`python ablation/ablate.py --help` lists the variants; Table 5 of the write-up gives the parameters each one switches
+off. The first run downloads the prepared `full` split from Hugging Face (about 63 GB); `--dataset DIR` reads a local
+copy of it instead. Runs resume from an existing output file, and a range of networks can be split over several
+processes, each writing its own file.
+
 ## How it works (short)
 
 The estimator propagates cumulants of the activations layer by layer instead of sampling: means, the full
