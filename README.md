@@ -11,7 +11,16 @@ final-layer MSE × max(0.1, FLOPs / 2^41); lower is better.
 | [`submission-337501/`](submission-337501/) | [#337501](https://www.aicrowd.com/challenges/arc-white-box-estimation-challenge-2026/submissions/337501) (pick 1) | CMP-1SC | 1.29915e-9 | `00bc59dfb2541a756e51ccef57696c1ad0603032018a0913280fe6ea8cc15eda` |
 | [`submission-337556/`](submission-337556/) | [#337556](https://www.aicrowd.com/challenges/arc-white-box-estimation-challenge-2026/submissions/337556) (pick 2) | F0Z-1SC | 1.29525e-9 | `19cd0fcf68589de57edf99ec44021ef3193ed9f564c6c7d5d78c4ac1468ea4b2` |
 
-Each folder is the exact submitted folder, byte for byte: `estimator.py` (the whole estimator in one file),
+The technical write-up is [`paper/Binner-ARC-WBE-Phase2-writeup.pdf`](paper/Binner-ARC-WBE-Phase2-writeup.pdf).
+
+| Path | Contents |
+|---|---|
+| `submission-337501/`, `submission-337556/` | The two submitted folders, byte for byte |
+| `paper/` | The technical write-up (PDF) |
+| `ablation/` | The switch-off experiments of the write-up (Table 4) |
+| `training/` | The training code, the estimator source it trained, and the generator of the differentiable Torch twin ([README](training/README.md)) |
+
+Each submission folder is the exact submitted folder, byte for byte: `estimator.py` (the whole estimator in one file),
 the precomputed data files it loads (`*.npz`: learned correction heads and lookup tables), and the
 third-party credit and licence files. The two folders differ only in `estimator.py`.
 
@@ -75,11 +84,12 @@ covariance, a factored representation of third cumulants ("sources × legs", wit
 layers and "births" of skew created by intermediate ReLUs), a scale-mixture model of fourth cumulants, and an
 Edgeworth readout. Three small learned heads correct the propagation inside the network; they were trained
 end-to-end through a differentiable twin of the estimator. The arithmetic is kept inside the FLOP budget with
-exact fast matrix multiplication schemes and exact restructuring. The full technical write-up will be linked here.
+exact fast matrix multiplication schemes and exact restructuring. The write-up in `paper/` describes all of it, with
+derivations, an error analysis and the measurements behind each component.
 
 ## Licence and credits
 
-Our own code is released under the MIT licence (`LICENSE`). Each submission folder contains `NOTICE.txt`, which
+Our own code is released under the MIT licence (`LICENSE`). Each submission folder, and `training/base/`, contains `NOTICE.txt`, which
 credits every third-party component used, with the corresponding licence files:
 
 - PLinOpt circuits (Dumas, Grenet, Pernet, Sedoglavic): CeCILL-B; the attribution notices are retained as that
@@ -93,5 +103,7 @@ credits every third-party component used, with the corresponding licence files:
 ## Use of AI tools
 
 Most of this estimator's code, and the tooling and tests behind it, were written by AI coding agents working under
-the team's direction and review: OpenAI Codex and ChatGPT, Anthropic Claude Code, and Google Gemini. The team chose
-the research directions, set the acceptance tests and checked the results.
+the author's direction and review: OpenAI Codex and ChatGPT, Anthropic Claude Code, and Google Gemini. Most of the
+specific ideas were also proposed by the agents. The author directed the research, including which kinds of learning
+methods to try, set the acceptance tests and the rules for evidence, checked the results and made every submission
+decision. The write-up was drafted by Claude Code and reviewed by the author; its last section gives the details.

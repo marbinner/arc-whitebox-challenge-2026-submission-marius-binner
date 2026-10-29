@@ -1,0 +1,698 @@
+{
+  "array_ops.symmetrize_matrix": {
+    "0.5": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "array_ops.zero_diagonal_owned": {
+    "0.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "corrector.apply_v2e": {
+    "2.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "1.0": {
+      "count": 3,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "0.5": {
+      "count": 3,
+      "reason": "Fixed arithmetic from frozen v210 science landing"
+    },
+    "0.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "corrector.centred_weight_squared": {
+    "2.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "corrector.derive_corrector": {
+    "0.5": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "0.0": {
+      "count": 8,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "corrector.derive_joint": {
+    "3.0": {
+      "count": 2,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "2.5": {
+      "count": 2,
+      "reason": "Fixed feature-coordinate normalization shared with tools/train fold."
+    },
+    "8.0": {
+      "count": 2,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "24.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "4.0": {
+      "count": 5,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "15.0": {
+      "count": 1,
+      "reason": "Depth-16 coordinate denominator, identical to depth minus one."
+    },
+    "0.5": {
+      "count": 3,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "0.0": {
+      "count": 19,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "1.0": {
+      "count": 56,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "0.25": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "0.3333333333333333": {
+      "count": 24,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "0.001": {
+      "count": 1,
+      "reason": "Fixed joint export/readout unit conversion, amplitude is separately registered."
+    }
+  },
+  "corrector.derive_v2e": {
+    "0.3333333333333333": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "1.0": {
+      "count": 4,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "2.5": {
+      "count": 1,
+      "reason": "Fixed feature-coordinate normalization shared with tools/train fold."
+    },
+    "2.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "10.0": {
+      "count": 2,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "0.0": {
+      "count": 27,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "0.5": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "15.0": {
+      "count": 1,
+      "reason": "Depth-16 coordinate denominator, identical to depth minus one."
+    }
+  },
+  "corrector.linear_corrections": {
+    "0.5": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "corrector.r8_corrections": {
+    "1.0": {
+      "count": 2,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "0.5": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "corrector.read_geometry": {
+    "0.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "16.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "corrector.read_joint": {
+    "1.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "corrector.standardized_birth_inputs": {
+    "1e-10": {
+      "count": 1,
+      "reason": "Fixed variance positivity guard used by the Gaussian equations; not fitted."
+    },
+    "1e-30": {
+      "count": 1,
+      "reason": "Fixed underflow guard, below float32 scientific signal; not fitted."
+    }
+  },
+  "cumulants3.calibrate_k3_level": {
+    "0.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "1.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "cumulants3.join_legs": {
+    "1e-06": {
+      "count": 1,
+      "reason": "Fixed division/orthogonalization guard; not fitted."
+    }
+  },
+  "cumulants3.prepare_source_birth": {
+    "3.0": {
+      "count": 2,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "cumulants3.transport_cumulants3": {
+    "0.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "1.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "2.0": {
+      "count": 2,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "3.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "cumulants3.weighted_leg_join": {
+    "1.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "1e-30": {
+      "count": 1,
+      "reason": "Fixed underflow guard, below float32 scientific signal; not fitted."
+    }
+  },
+  "cumulants4.dress_k4_pair": {
+    "6.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "cumulants4.fold_k31_into_births": {
+    "0.0": {
+      "count": 4,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "1.0": {
+      "count": 4,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "3.0": {
+      "count": 2,
+      "reason": "Fixed arithmetic from frozen v210 science landing"
+    }
+  },
+  "cumulants4.propagate_cumulants4": {
+    "0.0": {
+      "count": 3,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "3.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "cumulants4.reduce_k4_stars": {
+    "0.0": {
+      "count": 4,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "cumulants4.store_k4_vertices": {
+    "0.0": {
+      "count": 9,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "4.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "3.0": {
+      "count": 2,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "2.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "1.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "cumulants4.update_k4_host": {
+    "2.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "3.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "features.feature_pairs": {
+    "0.0": {
+      "count": 3,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "1.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "2.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "history.apply_feed_fold": {
+    "1e-06": {
+      "count": 1,
+      "reason": "Fixed division/orthogonalization guard; not fitted."
+    }
+  },
+  "history.carried_birth_chain": {
+    "0.0": {
+      "count": 2,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "0.5": {
+      "count": 2,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "initialize.initialize_state": {
+    "0.0": {
+      "count": 11,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "0.25": {
+      "count": 2,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "0.5": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "1.0": {
+      "count": 3,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "6.0": {
+      "count": 4,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "linalg._kz_r40_matmul": {
+    "0.125": {
+      "count": 1,
+      "reason": "Exact common scale 1/8 of the rank-40 circuits (sum_r W U V = 8 x matmul incidence); a power of two, so the scaled product is bit-exact."
+    }
+  },
+  "moments.chi_mean_ratio": {
+    "0.9997559189796448": {
+      "count": 1,
+      "reason": "Correctly rounded float32 sqrt(2/1024)*Gamma(1025/2)/Gamma(1024/2), the chi-radius mean factor. Mathematical width-only constant; reproduces the general metered float64 formula bytes."
+    },
+    "1.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "0.5": {
+      "count": 6,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "2.0": {
+      "count": 2,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "moments.edgeworth_second_order": {
+    "0.0": {
+      "count": 2,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "moments.hierarchical_covariance": {
+    "0.5": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "moments.input_covariance": {
+    "0.5": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "moments.linear_covariance": {
+    "0.5": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "moments.ordinary_cumulants": {
+    "2.0": {
+      "count": 2,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "4.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "3.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "12.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "6.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "moments.power_cumulant_slices": {
+    "0.5": {
+      "count": 4,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "0.25": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "0.0": {
+      "count": 12,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "2.0": {
+      "count": 2,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "4.0": {
+      "count": 3,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "6.0": {
+      "count": 2,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "moments.relu_moments": {
+    "0.0": {
+      "count": 8,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "1.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "4.0": {
+      "count": 3,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "0.5": {
+      "count": 2,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "moments.setup_moment_coefficients": {
+    "2.0": {
+      "count": 3,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation. Exact constant precomputed at setup by the BX request diet (relocated from its consumer; same value)."
+    },
+    "3.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "4.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "6.0": {
+      "count": 3,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation. Exact constant precomputed at setup by the BX request diet (relocated from its consumer; same value)."
+    },
+    "12.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "0.5": {
+      "count": 2,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation. Exact constant precomputed at setup by the BX request diet (relocated from its consumer; same value)."
+    },
+    "0.25": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "0.16666666666666666": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "0.041666666666666664": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "0.013888888888888888": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "0.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "144.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "0.0702381577526338": {
+      "count": 1,
+      "reason": "Fixed arithmetic from frozen v210 science landing"
+    },
+    "0.035677408136300125": {
+      "count": 1,
+      "reason": "Fixed arithmetic from frozen v210 science landing"
+    },
+    "0.7978845608028654": {
+      "count": 1,
+      "reason": "Fixed arithmetic from frozen v210 science landing"
+    },
+    "1.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "24.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "moments.shape_safe_gaussian": {
+    "1e-30": {
+      "count": 1,
+      "reason": "Fixed underflow guard, below float32 scientific signal; not fitted."
+    },
+    "0.5": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "moments.terminal_edgeworth": {
+    "0.0": {
+      "count": 2,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "moments.terminal_mean": {
+    "1.0": {
+      "count": 2,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "moments.terminal_variance": {
+    "2.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "moments.wick_coefficients": {
+    "0.5": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "1.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "0.0": {
+      "count": 2,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "4.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "runtime_api.activate_layer_parameters": {
+    "0.0": {
+      "count": 5,
+      "reason": "Exact initializer coefficients repeated for opt-in per-layer schedules; same formulas as initialize_state."
+    },
+    "0.25": {
+      "count": 2,
+      "reason": "Exact initializer coefficients repeated for opt-in per-layer schedules; same formulas as initialize_state."
+    },
+    "0.5": {
+      "count": 1,
+      "reason": "Exact initializer coefficients repeated for opt-in per-layer schedules; same formulas as initialize_state."
+    },
+    "1.0": {
+      "count": 3,
+      "reason": "Exact initializer coefficients repeated for opt-in per-layer schedules; same formulas as initialize_state."
+    },
+    "6.0": {
+      "count": 3,
+      "reason": "Exact initializer coefficients repeated for opt-in per-layer schedules; same formulas as initialize_state."
+    }
+  },
+  "selection.tail_count": {
+    "0.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "selection.terminal_fill": {
+    "1e-06": {
+      "count": 2,
+      "reason": "Fixed division/orthogonalization guard; not fitted."
+    },
+    "1.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "selection.terminal_fill_setup": {
+    "0.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "state.module": {
+    "0.0": {
+      "count": 148,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "0.041666666666666664": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "0.08333333333333333": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "0.16666666666666666": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "0.25": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "0.3333333333333333": {
+      "count": 2,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "0.3989422804014327": {
+      "count": 1,
+      "reason": "1/sqrt(2*pi), Gaussian normalization."
+    },
+    "1.0": {
+      "count": 18,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "1.1447298858494002": {
+      "count": 1,
+      "reason": "log(pi), chi-radius normalization."
+    },
+    "16.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "1e-10": {
+      "count": 1,
+      "reason": "Fixed variance positivity guard used by the Gaussian equations; not fitted."
+    },
+    "1e-30": {
+      "count": 1,
+      "reason": "Fixed underflow guard, below float32 scientific signal; not fitted."
+    },
+    "2.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "3.0": {
+      "count": 4,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "4.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "5.0": {
+      "count": 1,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    },
+    "6.0": {
+      "count": 2,
+      "reason": "Exact combinatorial, derivative, moment, zero/one, or symmetry coefficient in the declared equation."
+    }
+  },
+  "moments.safe_covariance_gaussian": {
+    "1e-30": {
+      "count": 1,
+      "reason": "Fixed arithmetic from frozen v210 science landing"
+    },
+    "0.5": {
+      "count": 1,
+      "reason": "Fixed arithmetic from frozen v210 science landing"
+    }
+  }
+}

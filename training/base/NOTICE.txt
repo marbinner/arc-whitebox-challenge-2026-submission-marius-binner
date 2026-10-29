@@ -1,0 +1,48 @@
+Sources and licensing
+=====================
+
+Rank-48 and rank-49 circuits
+---------------------------
+Derived from PLinOpt, by Jean-Guillaume Dumas, Bruno Grenet, Clement Pernet,
+and Alexandre Sedoglavic: https://github.com/jgdumas/plinopt
+Pinned upstream commit: 1af82ca4df7ed7d9687bc5f9a39bc10e724e1e0f.
+These derived circuit portions retain the CeCILL-B Version 1.0 terms;
+see LICENSE_CeCILL-B.txt and PLINOPT_AUTHORS.txt. Original source SLPs and
+hashes are also retained in the prior implementation/rank48_source and
+implementation/winograd49_source directories of the complete bundle.
+
+Stable alternative-basis rank-7 circuits
+---------------------------------------
+Adapted from Appendix A.1 of "Alternative Basis matrix multiplication is
+fast and stable", by Oded Schwartz, Sivan Toledo, Noa Vaknin and Gal Wiernik.
+DOI: https://doi.org/10.1007/s00211-026-01531-9
+Article license: CC BY 4.0, https://creativecommons.org/licenses/by/4.0/
+The adaptation changes signs and absorbs coordinate permutations into
+argument/output view tuples. This preserves the exact bilinear identities
+and absolute-coefficient error-growth quantities. Author attribution and
+the article/license links must accompany redistribution of these portions.
+
+New implementation work
+-----------------------
+Python translation, generated direct-ufunc/out interfaces, batching engine,
+paired-axis traversal, benchmarks, and permutation adaptation were prepared
+by ChatGPT on 2026-10-07. The two source licenses above apply to their
+respective derived portions; this notice does not assign a single blanket
+license to the whole implementation. No warranty is provided.
+
+The counter and benchmarks use public Flopscope 0.12.0+np2.4.6 operations.
+No private numerical entry points or unmetered array arithmetic are used
+inside multiply(). Ordinary NumPy is used only by separate validation code.
+
+Cumulant propagation (Alignment Research Center reference code)
+---------------------------------------------------------------
+The third-order cumulant ("K3") propagation at the core of this estimator
+started as a port of the Alignment Research Center's reference implementation
+of cumulant propagation, https://github.com/alignment-research-center/mlp_cumulant_propagation
+(src/mlp_kprop; commit 93d091a4c26c042bfffa28f2e76a81bc0aba94bb), which
+accompanies Wilson Wu, Victor Lecomte, Michael Winer, George Robinson, Jacob
+Hilton, and Paul Christiano, "Estimating the expected output of wide random
+MLPs more efficiently than sampling", arXiv:2605.05179 (2026),
+https://arxiv.org/abs/2605.05179. MIT License, Copyright (c) 2026 Alignment
+Research Center; see LICENSE_MIT_ARC.txt. Our port was rewritten for
+flopscope, restructured to fit the FLOP budget, and extended.
